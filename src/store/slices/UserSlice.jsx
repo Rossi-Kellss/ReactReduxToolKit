@@ -17,6 +17,15 @@ const UserSlice=createSlice({
             return [];
 
         }
+    },
+    extraReducers(builder){
+        builder.addCase(UserSlice.actions.clearUsers,()=>{
+            return [];
+        },
+        builder.addCase(UserSlice.actions.addUser,()=>{
+            
+        }))
+
     }
 
 })
