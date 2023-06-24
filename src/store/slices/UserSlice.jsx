@@ -10,9 +10,11 @@ const UserSlice=createSlice({
 
         },
         removeUser(state,action){
+            state.splice(action.payload,1)
 
         },
         clearUsers(state,action){
+            return [];
 
         }
     }
@@ -21,6 +23,6 @@ const UserSlice=createSlice({
 
 export default UserSlice.reducer; 
 
-export const {addUser}=UserSlice.actions;
+export const {addUser,removeUser,clearUsers}=UserSlice.actions;
     
 
